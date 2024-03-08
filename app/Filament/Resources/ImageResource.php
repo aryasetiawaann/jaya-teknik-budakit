@@ -34,8 +34,7 @@ class ImageResource extends Resource
                     ->relationship('product', 'name')
                     ->searchable(),
                 FileUpload::make('url')
-                    ->label('Image')
-                    ->required(),
+                    ->label('Image'),
             ]);
     }
 
