@@ -4,21 +4,22 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Category;
+use App\Models\Image;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
-use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\CategoryResource\Pages;
+use App\Filament\Resources\ImageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Filament\Resources\ImageResource\RelationManagers;
 
-class CategoryResource extends Resource
+class ImageResource extends Resource
 {
-    protected static ?string $model = Category::class;
+    protected static ?string $model = Image::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -26,13 +27,15 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Card::make()
-                ->schema([
-                    TextInput::make('category')
-                    ->label('Category')
+                Select::make('product_id')
+                    ->label('Product')
                     ->required()
-                    ->unique(ignorable: fn($record) => $record)
-                ])
+                    ->preload()
+                    ->relationship('product', 'name')
+                    ->searchable(),
+                FileUpload::make('url')
+                    ->label('Image')
+                    ->required(),
             ]);
     }
 
@@ -40,16 +43,19 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('category')
-                ->searchable()
-                ->sortable()
+                ImageColumn::make('url')
+                    ->label('Image')
+                    ->size(40),
+                TextColumn::make('product.name')
+                    ->label('Product')
+                    ->searchable()
+                    ->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -68,9 +74,9 @@ class CategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
-            'edit' => Pages\EditCategory::route('/{record}/edit'),
+            'index' => Pages\ListImages::route('/'),
+            'create' => Pages\CreateImage::route('/create'),
+            'edit' => Pages\EditImage::route('/{record}/edit'),
         ];
     }
 }
