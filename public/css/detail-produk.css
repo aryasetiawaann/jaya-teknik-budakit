@@ -4,8 +4,153 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 a {
     text-decoration: none;
+}
+
+.produk {
+    padding: 0 120px;
+    margin-top: 150px;
+    display: flex;
+}
+
+.produk-images {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produk-images .bottom-images {
+    padding-top: 45px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.produk-images img {
+    object-fit: cover;
+    border-radius: 15px;
+    width: 25%;
+    max-width: 300px;
+    height: auto;
+}
+
+.produk-images .top-image {
+    width: 80%;
+    border-radius: 25px;
+}
+
+.produk-detail {
+    width: 50%;
+    margin-left: 100px;
+}
+
+.kategori {
+    font-size: 20px;
+    color: #0045a2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.produk-detail h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.produk-detail p {
+    font-size: 16px;
+    color: #4b4b4b;
+    font-weight: 600;
+    width: 78%;
+    text-align: justify;
+}
+
+.detail-harga {
+    font-size: 35px;
+    font-weight: bold;
+    color: #0045a2;
+    margin-top: 10px;
+}
+
+.produk-detail button {
+    background-color: #0045a2;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 600px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.produk-detail svg {
+    margin-left: 10px;
+}
+
+.produk-spek {
+    background-color: #0146a2;
+    color: #ffffff;
+    margin-top: 120px;
+    padding: 30px 120px;
+    border-top-right-radius: 120px;
+}
+
+.produk-spek h1 {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.produk-spek .spek-detail {
+    margin-top: 30px;
+    max-width: 1000px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: justify;
+}
+
+@media screen and (width <= 1000px) {
+    .produk {
+        flex-direction: column;
+        padding: unset;
+    }
+
+    .produk-images .top-image {
+        width: 45%;
+    }
+
+    .produk-images,
+    .produk-detail,
+    .produk-detail,
+    .produk-detail p {
+        width: unset;
+    }
+
+    .produk-detail {
+        margin: 0 50px;
+        margin-top: 40px;
+    }
+
+    .produk-detail button {
+        max-width: none;
+    }
+
+    .produk-spek {
+        padding: 30px 50px;
+    }
+
+    .produk-spek .spek-detail {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (width <= 500px) {
 }

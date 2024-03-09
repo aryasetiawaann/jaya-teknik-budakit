@@ -66,35 +66,38 @@
                 <li class="kategori">Kategori</li>
                 <li class="kategori">Kategori</li>
                 <li class="kategori">Kategori</li>
+                <li class="kategori">Kategori</li>
+                <li class="kategori">Kategori</li>
+                <li class="kategori">Kategori</li>
+                <li class="kategori">Kategori</li>
             </ul>
             <svg class="kategori-icon" id="right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </div>
         <hr style="width: 87%; margin:auto; margin-bottom: 80px;">
 
         <div class="card-container">
-            @for ($i = 0; $i < 10; $i++)
+            @foreach ($product as $item)
                 <div class="card-produk">
-                    <img src="/assets/produk.png" alt="produk">
-                        <h3 class="card-harga">Rp 50.000</h3>
-                        <h3>Esbray Pump V25</h3>
-                        <button class="card-button">Order Sekarang <svg width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_0_38)">
-                            <path d="M15.2215 15.2302L14.6818 15.6868C14.6818 15.6868 13.3972 16.7713 9.89223 13.81C6.38722 10.8486 7.67179 9.76409 7.67179 9.76409L8.01103 9.47582C8.84962 8.76824 8.92909 7.63128 8.19725 6.80073L6.70273 5.10436C5.79652 4.07626 4.04698 3.94018 3.00912 4.8171L1.1469 6.38949C0.633304 6.82492 0.289327 7.38736 0.330841 8.01228C0.437593 9.61189 1.28923 13.052 6.03849 17.0656C11.076 21.3212 15.8027 21.4905 17.7349 21.3373C18.347 21.2889 18.8783 21.0249 19.3065 20.662L20.9908 19.2388C22.1295 18.2782 21.8093 16.6302 20.3527 15.9579L18.0872 14.9107C17.1312 14.4692 15.9688 14.5992 15.2215 15.2302Z" fill="white"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_0_38">
-                            <rect x="0.327454" y="0.115845" width="28.4671" height="24.1907" rx="12.0953" fill="white"/>
-                            </clipPath>
-                            </defs>
-                            </svg>
-                            </button>
+                    @if ($item->images->first() == null)
+                        <img src="/assets/default.png" alt="default">
+                    @else
+                        <img src="/storage/{{ $item->images->first()->url }}" alt="produk">
+                    @endif
+                        <h3 class="card-harga">Rp @php echo number_format($item['price'], 0, ',', '.'); @endphp</h3>
+                        <h3>{{ $item['name'] }}</h3>
+                        <a href="/{{ $item['name'] }}" class="card-button">Detail Produk
+                            </a>
                 </div>
-            @endfor
+            @endforeach
         </div>
     </section>
 
+    <form action="/send-email" method="POST">
+        @csrf
     <section class="kontak" id="kontak">
         <h1>Hubungi Kami</h1>
+        
+            
         <div class="kontak-top">
             <div class="top-nama">
                 <label for="nama">Nama</label>
@@ -106,8 +109,8 @@
             </div>
         </div>
         <div class="kontak-mid">
-            <label for="subject">Subjek</label>
-            <input type="text" name="subject" placeholder="Masukan subjek">
+            <label for="subjek">Subjek</label>
+            <input type="text" name="subjek" placeholder="Masukan subjek">
         </div>
         <div class="kontak-bottom">
             <label for="pesan">Pesan</label>
@@ -115,6 +118,7 @@
         </div>
         <button>Kirim Pesan</button>
     </section>
+</form>
 
     
 </body>

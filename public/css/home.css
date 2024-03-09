@@ -86,7 +86,7 @@ a {
 }
 
 .benefit h1,
-p {
+.benefit p {
     width: 600px;
 }
 
@@ -159,6 +159,7 @@ p {
 }
 
 .kategori-wrap svg {
+    z-index: 1;
     position: absolute;
     top: 0;
     height: 100%;
@@ -191,6 +192,7 @@ p {
 }
 
 .inner-kategori .kategori {
+    z-index: 0;
     padding: 0 13%;
     cursor: pointer;
     border-radius: 5px;
@@ -198,6 +200,7 @@ p {
     text-align: center;
     user-select: none;
     font-weight: bold;
+    text-transform: capitalize;
     transition: ease-out 0.2s;
 }
 
@@ -211,7 +214,7 @@ p {
     flex-wrap: wrap;
     gap: 10px;
     padding: 0 120px;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .card-produk {
@@ -234,14 +237,14 @@ p {
     margin-top: 5px;
 }
 
-.card-harga {
+.card-produk .card-harga {
     color: #0045a2;
+    margin-top: 20px;
 }
 
 .card-produk img {
     width: 95%;
     height: calc(95% / 2);
-    /* margin-top: -40px; */
     object-fit: cover;
 }
 
@@ -252,13 +255,13 @@ p {
     font-weight: bold;
     border: none;
     border-radius: 30px;
-    width: 200px;
+    width: 100%;
     height: 47px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* ------------- KONTAK SECTION ------------- */

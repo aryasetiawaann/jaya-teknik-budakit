@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailProduk;
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/nama-produk', [DetailProduk::class, 'index']);
+Route::get('/{name}', [DetailProduk::class, 'detail']);
+
+Route::post('/send-email', [EmailController::class, 'sendEmail']);

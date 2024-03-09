@@ -12,6 +12,7 @@ a {
 
 nav {
     position: fixed;
+    z-index: 3;
     top: 0;
     left: 0;
     right: 0;
@@ -24,6 +25,12 @@ nav {
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.closed,
+.opened {
+    display: none;
+    cursor: pointer;
 }
 
 .nav-left {
@@ -53,4 +60,62 @@ nav {
     color: #353535;
     font-weight: 600;
     font-size: 16px;
+}
+
+@media screen and (width <= 1000px) {
+    nav {
+        padding: 0 50px;
+    }
+
+    .nav-right ul {
+        gap: 40px;
+    }
+}
+
+@media screen and (width <= 500px) {
+    nav {
+        padding: 0 10px;
+    }
+
+    .closed {
+        display: block;
+        margin-right: 10px;
+        width: 50px;
+        height: 30px;
+    }
+
+    .opened {
+        /* display: block; */
+        margin-right: 10px;
+        width: 50px;
+        height: 30px;
+    }
+
+    .nav-right ul {
+        position: fixed;
+        top: 83px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+        display: none;
+    }
+
+    .nav-right li {
+        width: 100%;
+    }
+
+    .nav-right a {
+        padding: 20px 0;
+        display: block;
+    }
+
+    .nav-right a:hover {
+        background-color: #f0f0f0;
+    }
 }
