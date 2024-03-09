@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/home.css">
     <title>Jaya Teknik Global</title>
-
+    <script src="app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -73,12 +73,16 @@
 
     <section class="produk" id="produk">
         <h1>Daftar Produk Kami</h1>
-        <div class="kategori">
-            <h5>Kategori</h5>
-            <h5>Kategori</h5>
-            <h5>Kategori</h5>
+        <div class="kategori-wrap">
+        <svg class="kategori-icon" id="left" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <ul class="inner-kategori">
+                <li class="kategori">Kategori</li>
+                <li class="kategori">Kategori</li>
+                <li class="kategori">Kategori</li>
+            </ul>
+            <svg class="kategori-icon" id="right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </div>
-        <hr style="width: 80%; margin:auto; margin-bottom: 80px;">
+        <hr style="width: 87%; margin:auto; margin-bottom: 80px;">
 
         <div class="card-container">
             @for ($i = 0; $i < 10; $i++)
@@ -125,6 +129,7 @@
         <button>Kirim Pesan</button>
     </section>
 
+    
 </body>
 <footer>
     

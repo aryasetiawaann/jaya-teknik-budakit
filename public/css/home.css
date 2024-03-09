@@ -128,6 +128,7 @@ nav {
     background-color: #0045a2;
     color: #ffffff;
     padding: 65px;
+    scroll-margin-top: 85px;
 }
 
 .benefit h1,
@@ -185,6 +186,7 @@ p {
 /* ------------- PRODUK SECTION ------------- */
 .produk {
     margin: 80px 0;
+    scroll-margin-top: 140px;
 }
 
 .produk h1 {
@@ -194,15 +196,60 @@ p {
     text-align: center;
 }
 
-.kategori {
-    display: flex;
-    justify-content: space-around;
+.kategori-wrap {
+    position: relative;
+    margin: 0 auto;
     margin-top: 50px;
+    width: 87%;
+    overflow-x: hidden;
 }
 
-.kategori h5 {
-    font-size: 25px;
+.kategori-wrap svg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 30px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: ease 0.3s;
+    border-radius: 5px;
+}
+
+.kategori-wrap svg:hover {
+    background-color: #f0f0f0;
+}
+
+.kategori-wrap svg:first-child {
+    left: 0;
+}
+
+.kategori-wrap svg:last-child {
+    right: 0;
+}
+
+.kategori-wrap .inner-kategori {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    overflow-x: hidden;
+    padding: 5px 5%;
+    list-style: none;
+}
+
+.inner-kategori .kategori {
+    padding: 0 13%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    user-select: none;
     font-weight: bold;
+    transition: ease-out 0.2s;
+}
+
+.kategori:hover {
+    background-color: #0045a2;
+    color: #ffffff;
 }
 
 .card-container {
@@ -238,8 +285,9 @@ p {
 }
 
 .card-produk img {
-    width: 90%;
-    margin-top: -40px;
+    width: 95%;
+    height: calc(95% / 2);
+    /* margin-top: -40px; */
     object-fit: cover;
 }
 
@@ -265,6 +313,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 85px;
 }
 
 .kontak h1 {
