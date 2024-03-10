@@ -40,7 +40,7 @@ class ImageResource extends Resource
 
                         $image = Image::where('product_id', $get('product_id'))->get();
                         try {
-                            if (count($image) > 5) {
+                            if (count($image) > 4) {
                                 throw ValidationException::withMessages([
                                     'url' => 'Maksimal 5 Gambar per produk',
                                 ]);

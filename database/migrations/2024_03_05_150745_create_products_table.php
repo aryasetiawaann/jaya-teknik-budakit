@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name', 100);
             $table->integer('price');
             $table->unsignedBigInteger('category_id');
+            $table->string('url');
             $table->string('description');
             $table->text('spesification');
             $table->timestamps();

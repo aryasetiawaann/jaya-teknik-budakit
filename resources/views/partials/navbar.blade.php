@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
     <a href="/">
         <div class="nav-left">
             <img src="/assets/header/logo.png" alt="logo">

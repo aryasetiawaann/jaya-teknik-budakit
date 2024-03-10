@@ -5,7 +5,7 @@
             @if ($paginator->onFirstPage())
                 <li><a class="prev disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">&laquo</a></li>
             @else
-                <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')" class="prev">&laquo</a></li>
+                <li><a href="{{ $paginator->previousPageUrl() }}#produk" rel="prev" aria-label="@lang('pagination.previous')" class="prev">&laquo</a></li>
             @endif
 
             {{-- Pagination Elements --}}
@@ -21,7 +21,7 @@
                         @if ($page == $paginator->currentPage())
                             <li><a class="active">{{ $page }}</a></li>
                         @else
-                            <li><a href="{{ $url }}">{{ $page }}</a></li>
+                            <li><a href="{{ $url }}#produk">{{ $page }}</a></li>
                         @endif
                     @endforeach
                 @endif
@@ -29,7 +29,7 @@
 
             {{-- Next Page Link --}}
             @if ($paginator->hasMorePages())
-                <li><a href="{{ $paginator->nextPageUrl() }}" class="next">&raquo;</a></li>
+                <li><a href="{{ $paginator->nextPageUrl() }}#produk" class="next">&raquo;</a></li>
             @else
                 <li><a class="next disabled">&raquo;</a></li>
             @endif

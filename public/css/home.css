@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import url("https://fonts.googleapis.com/css?family=Lato:700");
 
 * {
     margin: 0;
@@ -10,9 +10,15 @@
 
 a {
     text-decoration: none;
+    color: unset;
+}
+
+textarea {
+    resize: vertical;
 }
 
 /* ------------- HERO SECTION ------------- */
+
 .hero {
     display: flex;
     margin: 200px 0 60px 0;
@@ -195,7 +201,7 @@ a {
 
 .inner-kategori .kategori {
     z-index: 0;
-    padding: 0 13%;
+    min-width: 33%;
     cursor: pointer;
     border-radius: 5px;
     font-size: 20px;
@@ -211,6 +217,11 @@ a {
     color: #ffffff;
 }
 
+.kategori.active {
+    background-color: #0045a2;
+    color: #ffffff;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -220,26 +231,34 @@ a {
 }
 
 .card-produk {
-    margin-top: 10px;
     border-radius: 25px;
     width: 320px;
-    height: 430px;
+    height: auto;
     background: #ffffff;
     box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
-    padding: 0 40px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.card-produk h3 {
-    align-self: start;
-    font-size: 20px;
-    margin-top: 5px;
+.card-desc {
+    width: 100%;
+    align-self: flex-start;
+    height: 90px;
+    margin: 10px 0;
 }
 
-.card-produk h3:last-child {
+.card-produk .card-harga {
+    color: #0045a2;
+    font-size: 20px;
+}
+
+.card-produk .card-nama {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -247,14 +266,9 @@ a {
     -webkit-box-orient: vertical;
 }
 
-.card-produk .card-harga {
-    color: #0045a2;
-    margin-top: 20px;
-}
-
 .card-produk img {
-    width: 95%;
-    height: calc(95% / 2);
+    width: 250px;
+    height: 220px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -272,7 +286,6 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-top: 20px;
 }
 
 /* ------------- KONTAK SECTION ------------- */
@@ -369,17 +382,19 @@ a {
     margin-top: 50px;
 }
 
-.prev.disabled, .next.disabled {
+.prev.disabled,
+.next.disabled {
     cursor: not-allowed;
     color: #000;
     background: #eee;
 }
 
-.prev.disabled:active, .next.disabled:active {
+.prev.disabled:active,
+.next.disabled:active {
     cursor: not-allowed;
     color: #000;
     background: #eee;
-    border: 1px #DDDDDD solid;
+    border: 1px #dddddd solid;
 }
 
 .pagination {
@@ -387,12 +402,12 @@ a {
     display: inline-block;
     padding: 0;
     margin-top: 10px;
-  }
-  .pagination li {
+}
+.pagination li {
     display: inline;
     text-align: center;
-  }
-  .pagination a {
+}
+.pagination a {
     float: left;
     display: block;
     font-size: 14px;
@@ -402,38 +417,38 @@ a {
     margin-left: -1px;
     border: 1px solid transparent;
     line-height: 1.5;
-  }
-  .pagination a.active {
+}
+.pagination a.active {
     cursor: default;
-  }
-  .pagination a:active {
+}
+.pagination a:active {
     outline: none;
-  }
-  
-  .modal-1 li:first-child a {
+}
+
+.modal-1 li:first-child a {
     -moz-border-radius: 6px 0 0 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px 0 0 6px;
-  }
-  .modal-1 li:last-child a {
+}
+.modal-1 li:last-child a {
     -moz-border-radius: 0 6px 6px 0;
     -webkit-border-radius: 0;
     border-radius: 0 6px 6px 0;
-  }
-  .modal-1 a {
+}
+.modal-1 a {
     border-color: #ddd;
     color: #0045a2;
     background: #fff;
-  }
-  .modal-1 a:hover {
+}
+.modal-1 a:hover {
     background: #eee;
-  }
-  .modal-1 a.active, .modal-1 a:active {
+}
+.modal-1 a.active,
+.modal-1 a:active {
     border-color: #0045a2;
     background: #0045a2;
     color: #fff;
-  }
-
+}
 
 @media screen and (width <= 1200px) {
     .hero-left p {
@@ -493,23 +508,15 @@ a {
     }
 
     .card-produk {
-        width: 200px;
-        height: 300px;
-        padding: 0 25px;
+        width: 250px;
+        padding: 20px 25px;
     }
 
-    .card-produk h3 {
-        font-size: 16px;
-        margin-top: 3px;
-    }
-
-    .card-produk .card-harga {
-        margin-top: 10px;
-    }
-
-    .card-button {
-        height: 40px;
-        margin-top: 10px;
+    .card-produk img {
+        width: 180px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     .card-container {
@@ -602,6 +609,10 @@ a {
         margin-top: 30px;
     }
 
+    .inner-kategori .kategori {
+        min-width: 50%;
+    }
+
     .card-container {
         gap: 15px;
         padding: 0 15px;
@@ -609,17 +620,24 @@ a {
 
     .card-produk {
         width: 150px;
-        height: 230px;
-        padding: 0 15px;
+        padding: 10px 15px 15px;
     }
 
-    .card-produk h3 {
+    .card-desc {
+        height: 65px;
+    }
+
+    .card-produk .card-nama {
         font-size: 12px;
     }
 
+    .card-produk .card-harga {
+        font-size: 16px;
+    }
+
     .card-produk img {
-        width: 100%;
-        height: calc(90% / 2);
+        width: 100px;
+        height: 100px;
         border-radius: 10px;
     }
 
@@ -655,6 +673,10 @@ a {
         width: 110px;
         height: 35px;
     }
+
+    .paginate {
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (width <= 350px) {
@@ -670,18 +692,26 @@ a {
 
     .card-produk {
         width: 120px;
-        height: 220px;
+        padding: 6px 12px 12px;
         border-radius: 10px;
     }
 
     .card-produk img {
-        width: 100%;
-        height: calc(85% / 2);
+        width: 100px;
+        height: 100px;
         border-radius: 10px;
     }
 
-    .card-produk h3 {
+    .card-produk .card-nama {
         font-size: 10px;
+    }
+
+    .card-produk .card-harga {
+        font-size: 12px;
+    }
+
+    .card-desc {
+        height: 50px;
     }
 
     .card-button {

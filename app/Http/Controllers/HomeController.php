@@ -17,26 +17,26 @@ class HomeController extends Controller
         return view('home')->with('product', $product)->with('category', $category);
     }
 
-    public function show()
+    public function show($id)
     {
-        $id = $_GET['id'];
-        $product = Product::where('category_id', $id)->get();
+        $product = Product::where('category_id', $id)->paginate(8);
+        $category = Category::all();
 
-        $temp = [];
-        foreach ($product as $p) {
-            $temp = $p->images;
-        };
+        // $temp = [];
+        // foreach ($product as $p) {
+        //     $temp = $p->images;
+        // };
         
-        $image = [];
-        foreach($temp as $t){
-            $image = $t->url;
-        };
+        // $image = [];
+        // foreach($temp as $t){
+        //     $image = $t->url;
+        // };
 
-        $data = [
-            'product' => $product,
-            'image' => $image
-        ];
+        // $data = [
+        //     'product' => $product,
+        //     'image' => $image
+        // ];
 
-        return $data ;
+        return view('home')->with('product', $product)->with('category', $category);
     }
 }

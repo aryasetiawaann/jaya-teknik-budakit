@@ -43,6 +43,8 @@ class ProductResource extends Resource
                     ->preload()
                     ->relationship('category', 'name')
                     ->searchable(),
+                TextInput::make('url')
+                    ->label('Url'),
                 Textarea::make('description')
                     ->label('Description')
                     ->required()
@@ -86,8 +88,9 @@ class ProductResource extends Resource
                     ->label('Category')
                     ->searchable()
                     ->sortable(), 
-                TextColumn::make('description')->limit(30), 
-                TextColumn::make('spesification')->limit(30), 
+                TextColumn::make('url')->limit(15),
+                TextColumn::make('description')->limit(15), 
+                TextColumn::make('spesification')->limit(15), 
             ])
             ->filters([
                 //

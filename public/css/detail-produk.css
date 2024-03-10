@@ -35,10 +35,44 @@ a {
 }
 
 .produk-images .bottom-images {
-    padding-top: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    border-radius: 5px;
+    margin-top: 15px;
     display: flex;
-    gap: 25px;
     justify-content: center;
+}
+
+.bottom-images svg {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: ease 0.3s;
+    border-radius: 5px;
+}
+
+.bottom-images svg:hover {
+    background-color: #f0f0f0;
+}
+
+.bottom-images svg:first-child {
+    left: 0;
+}
+
+.bottom-images svg:last-child {
+    right: 0;
+}
+
+.bottom-images-inner {
+    display: flex;
+    gap: 10px;
+    overflow-x: hidden;
+    padding: 0 60px;
 }
 
 .produk-images .top-image {
@@ -59,7 +93,7 @@ a {
 }
 
 .produk-detail h1 {
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -92,6 +126,7 @@ a {
     align-items: center;
     justify-content: center;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .produk-detail svg {
@@ -169,8 +204,19 @@ a {
     }
 
     .produk-images .bottom-images {
-        gap: 10px;
-        padding-top: 15px;
+        padding-top: 5px;
+        width: 300px;
+    }
+
+    .bottom-images svg {
+        width: 25px;
+    }
+
+    .bottom-images-inner {
+        display: flex;
+        gap: 5px;
+        overflow-x: hidden;
+        padding: 0 30px;
     }
 
     .produk-images .top-image {
@@ -209,6 +255,7 @@ a {
         padding: 15px 10px;
         border-top-right-radius: 20px;
         margin-top: 50px;
+        margin-bottom: -1px;
     }
 
     .produk-spek h1 {
