@@ -24,23 +24,25 @@ a {
     align-items: center;
 }
 
+.produk-images img {
+    object-fit: cover;
+    padding: 3px;
+    border-radius: 10px;
+    width: 150px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    border: 1px solid #4b4b4b;
+}
+
 .produk-images .bottom-images {
-    padding-top: 45px;
+    padding-top: 30px;
     display: flex;
     gap: 25px;
     justify-content: center;
 }
 
-.produk-images img {
-    object-fit: cover;
-    border-radius: 15px;
-    width: 25%;
-    max-width: 300px;
-    height: auto;
-}
-
 .produk-images .top-image {
-    width: 80%;
+    width: 350px;
     border-radius: 25px;
 }
 
@@ -123,8 +125,12 @@ a {
         padding: unset;
     }
 
-    .produk-images .top-image {
-        width: 45%;
+    .produk-images img {
+        width: 100px;
+    }
+
+    .produk-images .bottom-images {
+        padding-top: 25px;
     }
 
     .produk-images,
@@ -145,6 +151,7 @@ a {
 
     .produk-spek {
         padding: 30px 50px;
+        border-top-right-radius: 50px;
     }
 
     .produk-spek .spek-detail {
@@ -152,5 +159,64 @@ a {
     }
 }
 
-@media screen and (width <= 500px) {
+@media screen and (width <= 700px) {
+    .produk {
+        margin-top: 130px;
+    }
+
+    .produk-images img {
+        width: 80px;
+    }
+
+    .produk-images .bottom-images {
+        gap: 10px;
+        padding-top: 15px;
+    }
+
+    .produk-images .top-image {
+        width: 250px;
+    }
+
+    .kategori {
+        font-size: 16px;
+    }
+
+    .produk-detail h1 {
+        font-size: 18px;
+    }
+
+    .produk-detail p {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .detail-harga {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .produk-detail button {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .produk-detail {
+        margin: 0 10px;
+        margin-top: 20px;
+    }
+
+    .produk-spek {
+        padding: 15px 10px;
+        border-top-right-radius: 20px;
+        margin-top: 50px;
+    }
+
+    .produk-spek h1 {
+        font-size: 18px;
+    }
+
+    .produk-spek .spek-detail {
+        font-size: 12px;
+        margin-top: 10px;
+    }
 }

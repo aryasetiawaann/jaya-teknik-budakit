@@ -212,9 +212,9 @@ a {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
     padding: 0 120px;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .card-produk {
@@ -237,6 +237,14 @@ a {
     margin-top: 5px;
 }
 
+.card-produk h3:last-child {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
 .card-produk .card-harga {
     color: #0045a2;
     margin-top: 20px;
@@ -246,6 +254,7 @@ a {
     width: 95%;
     height: calc(95% / 2);
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .card-button {
@@ -350,4 +359,259 @@ a {
     font-weight: bold;
     color: #ffffff;
     cursor: pointer;
+}
+
+@media screen and (width <= 1200px) {
+    .hero-left p {
+        width: 450px;
+    }
+
+    .card-container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (width <= 1000px) {
+    .hero {
+        flex-direction: column-reverse;
+        margin-bottom: 100px;
+    }
+
+    .hero-image {
+        width: 400px;
+    }
+
+    .hero-left {
+        width: unset;
+        padding: 0 50px;
+    }
+
+    .hero-left p {
+        width: unset;
+    }
+
+    .hero-left h1,
+    .benefit h1 {
+        font-size: 40px;
+    }
+
+    .benefit {
+        padding: 50px;
+    }
+
+    .benefit-list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .benefit p,
+    .benefit h3 {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .inner-kategori .kategori {
+        font-size: 16px;
+    }
+
+    .produk hr {
+        margin-bottom: 30px !important;
+    }
+
+    .card-produk {
+        width: 200px;
+        height: 300px;
+        padding: 0 25px;
+    }
+
+    .card-produk h3 {
+        font-size: 16px;
+        margin-top: 3px;
+    }
+
+    .card-produk .card-harga {
+        margin-top: 10px;
+    }
+
+    .card-button {
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .card-container {
+        gap: 20px;
+    }
+
+    .kontak {
+        padding: 0 50px;
+        padding-bottom: 60px;
+    }
+
+    .kontak-top {
+        gap: 30px;
+        width: 100%;
+    }
+
+    .kontak-top input {
+        width: unset;
+    }
+
+    .kontak-top .top-nama,
+    .kontak-top .top-email {
+        width: 50%;
+    }
+
+    .kontak-mid,
+    .kontak-bottom {
+        width: 100%;
+    }
+
+    .kontak button {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (width <= 700px) {
+    .hero {
+        margin-bottom: 60px;
+    }
+
+    .hero-left {
+        padding: 0 15px;
+    }
+
+    .hero-left h1,
+    .benefit h1,
+    .produk h1,
+    .kontak h1 {
+        font-size: 24px;
+    }
+
+    .hero-left p {
+        font-size: 12px;
+        text-align: justify;
+        margin: 10px 0 30px 0;
+    }
+
+    .hero-order-btn,
+    .hero-produk-btn {
+        font-size: 12px;
+    }
+
+    .hero-order-btn {
+        width: 160px;
+    }
+
+    .hero-order-btn svg {
+        margin-left: 5px;
+        width: 20px;
+    }
+
+    .benefit {
+        padding: 50px 15px;
+    }
+
+    .benefit p {
+        font-size: 12px;
+    }
+
+    .benefit h1,
+    .benefit p {
+        width: unset;
+    }
+
+    .produk {
+        margin: 60px 0;
+    }
+
+    .kategori-wrap {
+        margin-top: 30px;
+    }
+
+    .card-container {
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .card-produk {
+        width: 150px;
+        height: 230px;
+        padding: 0 15px;
+    }
+
+    .card-produk h3 {
+        font-size: 12px;
+    }
+
+    .card-produk img {
+        width: 100%;
+        height: calc(90% / 2);
+        border-radius: 10px;
+    }
+
+    .card-button {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .kontak {
+        padding: 0 15px;
+        padding-bottom: 60px;
+    }
+
+    .kontak-top {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .kontak-top .top-nama,
+    .kontak-top .top-email {
+        width: unset;
+    }
+
+    .kontak label,
+    .kontak input,
+    .kontak textarea {
+        font-size: 12px;
+    }
+
+    .kontak button {
+        margin-top: 30px;
+        font-size: 12px;
+        width: 110px;
+        height: 35px;
+    }
+}
+
+@media screen and (width <= 350px) {
+    .hero-image {
+        width: 300px;
+    }
+
+    .benefit-item,
+    .benefit-item-img-base,
+    .benefit-item img {
+        width: 100%;
+    }
+
+    .card-produk {
+        width: 120px;
+        height: 220px;
+        border-radius: 10px;
+    }
+
+    .card-produk img {
+        width: 100%;
+        height: calc(85% / 2);
+        border-radius: 10px;
+    }
+
+    .card-produk h3 {
+        font-size: 10px;
+    }
+
+    .card-button {
+        height: 25px;
+        font-size: 10px;
+    }
 }

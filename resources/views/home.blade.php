@@ -33,7 +33,7 @@
                         </defs>
                         </svg>
                         </button>
-                    <a class="hero-produk-btn" href="">Lihat semua produk</a>
+                    <a class="hero-produk-btn" href="#produk">Lihat semua produk</a>
                 </div>
             </div>
             <div class="hero-right">

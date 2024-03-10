@@ -16,10 +16,10 @@
 
     <div class="footer-middle">
         <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#benefit">Benefit</a></li>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="/#">Beranda</a></li>
+            <li><a href="/#benefit">Benefit</a></li>
+            <li><a href="/#produk">Produk</a></li>
+            <li><a href="/#kontak">Kontak</a></li>
         </ul>
         <p>© Jaya Teknik Global 2024</p>
     </div>
