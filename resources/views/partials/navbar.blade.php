@@ -1,4 +1,4 @@
-<nav>
+<nav class="navbar">
     <a href="/">
         <div class="nav-left">
             <img src="/assets/header/logo.png" alt="logo">

@@ -18,6 +18,7 @@ class DetailProduk extends Controller
     public function detail($name) 
     {
         $product = Product::where('name', $name)->first();
+        
 
         return view('detail-produk')->with('product', $product);
     }

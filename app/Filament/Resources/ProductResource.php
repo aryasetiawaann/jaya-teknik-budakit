@@ -82,11 +82,12 @@ class ProductResource extends Resource
                 TextColumn::make('price')
                     ->searchable()
                     ->sortable(), 
-                TextColumn::make('category')
+                TextColumn::make('category.name')
+                    ->label('Category')
                     ->searchable()
                     ->sortable(), 
-                TextColumn::make('description'), 
-                TextColumn::make('spesification'), 
+                TextColumn::make('description')->limit(30), 
+                TextColumn::make('spesification')->limit(30), 
             ])
             ->filters([
                 //

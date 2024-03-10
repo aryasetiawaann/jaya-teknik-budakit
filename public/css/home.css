@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+
 * {
     margin: 0;
     padding: 0;
@@ -263,7 +265,7 @@ a {
     font-size: 16px;
     font-weight: bold;
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     width: 100%;
     height: 47px;
     display: flex;
@@ -360,6 +362,78 @@ a {
     color: #ffffff;
     cursor: pointer;
 }
+
+.paginate {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.prev.disabled, .next.disabled {
+    cursor: not-allowed;
+    color: #000;
+    background: #eee;
+}
+
+.prev.disabled:active, .next.disabled:active {
+    cursor: not-allowed;
+    color: #000;
+    background: #eee;
+    border: 1px #DDDDDD solid;
+}
+
+.pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .pagination li {
+    display: inline;
+    text-align: center;
+  }
+  .pagination a {
+    float: left;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #fff;
+    margin-left: -1px;
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  .pagination a.active {
+    cursor: default;
+  }
+  .pagination a:active {
+    outline: none;
+  }
+  
+  .modal-1 li:first-child a {
+    -moz-border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px 0 0 6px;
+  }
+  .modal-1 li:last-child a {
+    -moz-border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .modal-1 a {
+    border-color: #ddd;
+    color: #0045a2;
+    background: #fff;
+  }
+  .modal-1 a:hover {
+    background: #eee;
+  }
+  .modal-1 a.active, .modal-1 a:active {
+    border-color: #0045a2;
+    background: #0045a2;
+    color: #fff;
+  }
+
 
 @media screen and (width <= 1200px) {
     .hero-left p {

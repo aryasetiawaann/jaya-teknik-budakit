@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
     <script src="app.js" defer></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <section class="header">
@@ -63,8 +65,8 @@
         <div class="kategori-wrap">
         <svg class="kategori-icon" id="left" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
             <ul class="inner-kategori">
-                @foreach ($product as $item)
-                <li class="kategori">{{ $item->category->name }}</li>
+                @foreach ($category as $item)
+                <li class="kategori">{{ $item->name }}</li>
                 @endforeach
             </ul>
             <svg class="kategori-icon" id="right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -84,16 +86,20 @@
                         <a href="/{{ $item['name'] }}" class="card-button">Detail Produk
                             </a>
                 </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+            
+            
+        </section>
+        
+    <section class="paginate">
+        {{ $product->links('partials.pagination') }}
     </section>
 
     <form action="/send-email" method="POST">
         @csrf
     <section class="kontak" id="kontak">
         <h1>Hubungi Kami</h1>
-        
-            
         <div class="kontak-top">
             <div class="top-nama">
                 <label for="nama">Nama</label>
