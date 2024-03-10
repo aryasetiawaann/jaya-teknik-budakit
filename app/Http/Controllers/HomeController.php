@@ -17,5 +17,26 @@ class HomeController extends Controller
         return view('home')->with('product', $product)->with('category', $category);
     }
 
+    public function show()
+    {
+        $id = $_GET['id'];
+        $product = Product::where('category_id', $id)->get();
 
+        $temp = [];
+        foreach ($product as $p) {
+            $temp = $p->images;
+        };
+        
+        $image = [];
+        foreach($temp as $t){
+            $image = $t->url;
+        };
+
+        $data = [
+            'product' => $product,
+            'image' => $image
+        ];
+
+        return $data ;
+    }
 }
