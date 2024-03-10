@@ -21,7 +21,7 @@
 
     @if (count($product->images) > 1)
             <div class="bottom-images">
-                @foreach ($product->images->skip(1) as $key => $image)
+                @foreach ($product->images as $key => $image)
                 <img id="bottom-image-{{ $key }}" class="bottom-image" src="/storage/{{ $image->url }}" alt="">
                 @endforeach
             </div>
@@ -32,7 +32,7 @@
 
         </div>
         <div class="produk-detail">
-            <h3 class="kategori">{{ $category }}</h3>
+            <h3 class="kategori">{{ $product->category->name }}</h3>
             <h1>{{ $product->name }}</h1>
             <p>
             {{ $product->description }}
@@ -71,25 +71,12 @@
         var topImageOri = topImageFirst.src;
 
         bottomImages.forEach(function(image) {
-            image.addEventListener('click', function() {
-                var topImage = document.getElementById('top-image');
-                
-                if(topImage.src == topImageOri) {
-                    var temp = this.src;
-                    this.src = topImage.src;
-                    topImage.src = temp;
-                } else {
-                    var tempUp = topImage.src;
-                    topImage.src = topImageOri;
-                    this.src = tempUp;
-
-                    // var temp = this.src;
-                    // this.src = topImage.src;
-                    // topImage.src = temp;
-                }
-                
-            });
+        image.addEventListener('click', function() {
+            var topImage = document.getElementById('top-image');
+            topImage.src = this.src;
         });
+});
+
     });
 </script>
 </html>

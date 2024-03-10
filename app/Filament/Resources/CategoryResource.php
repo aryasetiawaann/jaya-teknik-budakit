@@ -28,8 +28,8 @@ class CategoryResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
-                    TextInput::make('category')
-                    ->label('Category')
+                    TextInput::make('name')
+                    ->label('name')
                     ->required()
                     ->unique(ignorable: fn($record) => $record)
                 ])
@@ -40,7 +40,7 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('category')
+                TextColumn::make('name')
                 ->searchable()
                 ->sortable()
             ])

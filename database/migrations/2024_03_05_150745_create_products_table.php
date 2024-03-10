@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name', 100);
             $table->integer('price');
-            $table->unsignedBigInteger('category');
+            $table->unsignedBigInteger('category_id');
             $table->string('description');
             $table->text('spesification');
             $table->timestamps();
 
-            $table->foreign('category')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

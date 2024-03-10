@@ -18,4 +18,10 @@ class Image extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    // public function product_id($id = null) {
+    //     $data = Image::where('product_id', $id)->get();
+
+    //     return count($data);
+    // }
 }

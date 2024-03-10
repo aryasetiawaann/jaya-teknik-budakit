@@ -37,11 +37,11 @@ class ProductResource extends Resource
                 TextInput::make('price')
                     ->label('Price')
                     ->required(),
-                Select::make('category')
+                Select::make('category_id')
                     ->label('Category')
                     ->required()
                     ->preload()
-                    ->relationship('category', 'category')
+                    ->relationship('category', 'name')
                     ->searchable(),
                 Textarea::make('description')
                     ->label('Description')

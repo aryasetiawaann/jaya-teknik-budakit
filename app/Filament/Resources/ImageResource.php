@@ -2,20 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use Filament\Tables;
-use App\Models\Image;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Forms\Components\FileUpload;
-use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ImageResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\ImageResource\RelationManagers;
+use App\Models\Image;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Notifications\Notification;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Validation\ValidationException;
 
 class ImageResource extends Resource
 {
@@ -34,7 +34,30 @@ class ImageResource extends Resource
                     ->relationship('product', 'name')
                     ->searchable(),
                 FileUpload::make('url')
-                    ->label('Image'),
+                    ->label('Image')
+                    ->required()
+                    ->saveUploadedFileUsing(function (UploadedFile $file, $record, Get $get) {
+
+                        $image = Image::where('product_id', $get('product_id'))->get();
+                        try {
+                            if (count($image) > 5) {
+                                throw ValidationException::withMessages([
+                                    'url' => 'Maksimal 5 Gambar per produk',
+                                ]);
+                            } else {
+                                $path = $file->store('images', 'public');
+                                return $path;
+                            }
+                        } catch (ValidationException $exception) {
+                            Notification::make()
+                                ->title($exception->getMessage())
+                                ->danger()
+                                ->send();
+
+                            throw $exception;
+                        }
+                    }),
+                // ->directory('product_images')
             ]);
     }
 
