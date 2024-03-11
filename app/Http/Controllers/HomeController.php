@@ -22,21 +22,24 @@ class HomeController extends Controller
         $product = Product::where('category_id', $id)->paginate(8);
         $category = Category::all();
 
-        // $temp = [];
-        // foreach ($product as $p) {
-        //     $temp = $p->images;
-        // };
-        
-        // $image = [];
-        // foreach($temp as $t){
-        //     $image = $t->url;
-        // };
-
-        // $data = [
-        //     'product' => $product,
-        //     'image' => $image
-        // ];
-
         return view('home')->with('product', $product)->with('category', $category);
+    }
+
+    public function sendWhatsapp(Request $request){
+        $random_cs = "6285156231781";
+
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $message = $request->input('message');
+
+        $text = urlencode("Halo, saya ${name} Email saya: ${email} Pertanyaan: ${message}");
+
+        $url_wa = "https://web.whatsapp.com/send?phone=${random_cs}&text=${text}";
+        if(preg_match('/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i', $_SERVER['HTTP_USER_AGENT'])) {
+            $url_wa = "whatsapp://send?phone=${random_cs}&text=${text}";
+        }
+
+        header("Location: $url_wa");
+        exit();
     }
 }

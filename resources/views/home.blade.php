@@ -94,7 +94,7 @@
             </svg>
             <ul class="inner-kategori">
                 @foreach ($category as $item)
-                <a class="kategori @php  $url = parse_url($_SERVER['REQUEST_URI']) ;
+                <a class="kategori <?php  $url = parse_url($_SERVER['REQUEST_URI']) ;
                                         $pemisah = explode('/', $url['path']);
                                         $id = end($pemisah);
 
@@ -102,8 +102,7 @@
                                             echo 'active';
                                         }else {
                                             echo "";
-                                        };
-                                    @endphp" href="http://localhost:8000/category/{{ $item->id }}#produk">
+                                        }; ?>" href="http://localhost:8000/category/{{ $item->id }}#produk">
                     <li  data-id="{{ $item->id }}">{{ $item->name }}
                     </li>
                 </a>
@@ -148,7 +147,7 @@
         {{ $product->links('partials.pagination') }}
     </section>
 
-    <form action="/send-email" method="POST">
+    <form action="/hubungi" method="POST">
         @csrf
         <section class="kontak" id="kontak">
             <h1>Hubungi Kami</h1>
@@ -180,6 +179,19 @@
 
 <script>
     AOS.init();
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const img = document.querySelectorAll('img');
+
+    img.forEach((element) => {
+        const img = document.querySelectorAll('img');
+
+        img.forEach((element) => {
+            element.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+            });
+        });
+    });});
 
     // $('.kategori').click(function() {
     //     // let category_id = $(this).data('id');

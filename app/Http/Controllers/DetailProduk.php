@@ -22,4 +22,19 @@ class DetailProduk extends Controller
 
         return view('detail-produk')->with('product', $product);
     }
+
+    public function sendWhatsapp($id){
+        $product = Product::where('id', $id)->first();
+        $random_cs = "6285156231781";
+
+        $text = urlencode("Halo, saya tertarik dengan produk ". $product->name . "yang ada di toko Anda. Apakah masih tersedia?");
+
+        $url_wa = "https://web.whatsapp.com/send?phone=${random_cs}&text=${text}";
+        if(preg_match('/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i', $_SERVER['HTTP_USER_AGENT'])) {
+            $url_wa = "whatsapp://send?phone=${random_cs}&text=${text}";
+        }
+
+        header("Location: $url_wa");
+        exit();
+    }
 }

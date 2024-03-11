@@ -5,10 +5,20 @@
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
     user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
 }
 
 a {
     text-decoration: none;
+}
+
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .produk {
@@ -112,6 +122,12 @@ a {
     margin-top: 10px;
 }
 
+.wa-button {
+    display: block;
+    width: 90%;
+    max-width: 600px;
+}
+
 .produk-detail button {
     background-color: #0045a2;
     color: #ffffff;
@@ -120,13 +136,31 @@ a {
     font-size: 20px;
     font-weight: 600;
     width: 100%;
-    max-width: 600px;
     height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
     cursor: pointer;
+}
+
+.detail-buttons {
+    display: flex;
+}
+
+.tokopedia-button {
+    background-color: #41b549;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 39px;
+    margin-left: 15px;
+    transition: 0.1s ease;
+}
+
+.tokopedia-button img {
+    width: 53px;
 }
 
 .produk-detail svg {
@@ -244,6 +278,11 @@ a {
     .produk-detail button {
         margin-top: 20px;
         font-size: 16px;
+    }
+
+    .tokopedia-button {
+        margin-top: 20px;
+        margin-left: 5px;
     }
 
     .produk-detail {

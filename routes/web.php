@@ -18,7 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/category/{id}', [HomeController::class, 'show']);
+Route::post('/hubungi', [HomeController::class, 'sendWhatsapp']);
+
 Route::get('/nama-produk', [DetailProduk::class, 'index']);
 Route::get('/{name}', [DetailProduk::class, 'detail']);
+Route::get('/send-message/{id}', [DetailProduk::class, 'sendWhatsapp']);
 
-Route::post('/send-email', [EmailController::class, 'sendEmail']);
+// Route::post('/send-email', [EmailController::class, 'sendEmail']);
