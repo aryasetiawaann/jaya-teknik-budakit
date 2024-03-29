@@ -37,7 +37,7 @@
                     Sejuk. Temukan Solusi Terbaik Anda dalam
                     Dunia Pompa Air Bersama Kami</p>
                 <div class="hero-button" data-aos="fade-up" data-aos-duration="1000">
-                    <a href="https://tokopedia.link/bjYCI0x4QHb" target="_blank">
+                    <a href="https://tokopedia.link/16I4HNAImIb" target="_blank">
                         <button class="hero-order-btn">Order Sekarang <svg
                                 width="29" height="25" viewBox="0 0 29 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
