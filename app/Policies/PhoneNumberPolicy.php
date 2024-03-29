@@ -41,7 +41,7 @@ class PhoneNumberPolicy
         if (Auth::check()) {
             $phone = PhoneNumber::get()->first();
 
-            if ($phone->number) {
+            if ($phone) {
                 return true;
             } else {
                 return false;
