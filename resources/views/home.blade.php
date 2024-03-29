@@ -129,7 +129,7 @@
                     } else {
                         echo '';
                     } ?>"
-                        href="http://localhost:8000/category/{{ $item->id }}#produk">
+                        href="/category/{{ $item->id }}#produk">
                         <li data-id="{{ $item->id }}">{{ $item->name }}
                         </li>
                     </a>
