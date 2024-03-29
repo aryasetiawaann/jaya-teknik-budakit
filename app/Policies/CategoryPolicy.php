@@ -68,7 +68,7 @@ class CategoryPolicy
             $isNull = Product::where('category_id', $category->id)->get();
 
             if($isNull->isEmpty()) {
-                return false;
+                return true;
             } else {
                 return false;
             }
