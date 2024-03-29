@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\PhoneNumber;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,7 +27,8 @@ class HomeController extends Controller
     }
 
     public function sendWhatsapp(Request $request){
-        $random_cs = "6285156231781";
+        $phone = PhoneNumber::get()->first();
+        $random_cs = $phone->number;
 
         $name = $request->input('name');
         $email = $request->input('email');
