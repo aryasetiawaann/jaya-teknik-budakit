@@ -153,7 +153,7 @@
                     @if ($item->images->first() == null)
                         <img src="/assets/default.png" alt="default">
                     @else
-                        <img src="{{ Storage::url($item->images->first()->url) }}" alt="produk">
+                        <img src="/storage/{{ $item->images->first()->url }}" alt="produk">
                     @endif
                     <div class="card-desc">
                         <p class="card-nama">{{ $item['name'] }}</p>
