@@ -1,6 +1,9 @@
 const innerKategori = document.querySelector(".inner-kategori");
 const arrowicons = document.querySelectorAll(".kategori-icon");
 
+const innerPorto = document.querySelector(".inner-porto");
+const arrowPorto = document.querySelectorAll(".porto-icon");
+
 let isDragging = false;
 let startX = 0;
 let scrollLeft = 0;
@@ -31,3 +34,9 @@ const dragStop = () => {
 innerKategori.addEventListener("mousedown", startDragging);
 innerKategori.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
+
+arrowPorto.forEach((element) => {
+    element.addEventListener("click", (e) => {
+        innerPorto.scrollLeft -= element.id === "left" ? 200 : -200;
+    });
+});
