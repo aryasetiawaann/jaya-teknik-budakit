@@ -51,26 +51,27 @@ class ProductResource extends Resource
                     ->autosize()
                     ->minLength(5)
                     ->maxLength(255),
-                    RichEditor::make('spesification')
-                ->toolbarButtons([
-                    'attachFiles',
-        'blockquote',
-        'bold',
-        'bulletList',
-        'codeBlock',
-        'h2',
-        'h3',
-        'italic',
-        'link',
-        'orderedList',
-        'redo',
-        'strike',
-        'underline',
-        'undo',
-                ])
-                ->fileAttachmentsDisk('s3')
-                ->fileAttachmentsDirectory('attachments')
-                ->fileAttachmentsVisibility('private')    
+                RichEditor::make('spesification')
+                    ->required()
+                    ->toolbarButtons([
+                        'attachFiles',
+                        'blockquote',
+                        'bold',
+                        'bulletList',
+                        'codeBlock',
+                        'h2',
+                        'h3',
+                        'italic',
+                        'link',
+                        'orderedList',
+                        'redo',
+                        'strike',
+                        'underline',
+                        'undo',
+                    ])
+                    ->fileAttachmentsDisk('s3')
+                    ->fileAttachmentsDirectory('attachments')
+                    ->fileAttachmentsVisibility('private')
             ]);
     }
 
@@ -83,14 +84,14 @@ class ProductResource extends Resource
                     ->sortable(),
                 TextColumn::make('price')
                     ->searchable()
-                    ->sortable(), 
+                    ->sortable(),
                 TextColumn::make('category.name')
                     ->label('Category')
                     ->searchable()
-                    ->sortable(), 
+                    ->sortable(),
                 TextColumn::make('url')->limit(15),
-                TextColumn::make('description')->limit(15), 
-                TextColumn::make('spesification')->limit(15), 
+                TextColumn::make('description')->limit(15),
+                TextColumn::make('spesification')->limit(15),
             ])
             ->filters([
                 //
@@ -121,4 +122,6 @@ class ProductResource extends Resource
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
+
+    
 }

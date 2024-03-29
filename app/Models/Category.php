@@ -15,4 +15,14 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    /**
+     * Determine if the product is being referenced in other tables.
+     *
+     * @return bool
+     */
+    public function isReferencedElsewhere(): bool
+    {
+        return Product::where('category_id', $this->id)->exists();
+    }
 }
