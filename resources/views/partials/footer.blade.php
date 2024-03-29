@@ -2,8 +2,8 @@
     
     <div class="footer-left">
         <div class="footer-logo">
-            <img src="/assets/header/logo.png" alt="">
-            <p>JAYA TEKNIK GLOBAL</p>
+            <img src="/assets/header/logo-white.png" alt="">
+            {{-- <p>JAYA TEKNIK GLOBAL</p> --}}
         </div>
         <div class="footer-location">
             {{-- <img src="/assets/Vector.png" alt="vector"> --}}

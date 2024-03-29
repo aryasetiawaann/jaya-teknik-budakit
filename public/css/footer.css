@@ -30,7 +30,8 @@ footer {
 }
 
 .footer-logo img {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    width: 120px;
 }
 
 .footer-logo p {
@@ -44,6 +45,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-left: 30px;
 }
 
 .footer-location p {

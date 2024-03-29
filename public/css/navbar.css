@@ -42,7 +42,8 @@ nav {
 }
 
 .nav-left img {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    width: 180px;
 }
 
 .nav-left h1 {
@@ -128,8 +129,8 @@ nav {
     }
 
     .nav-left img {
-        margin-bottom: 20px;
-        width: 60px;
+        /* margin-bottom: 20px; */
+        width: 140px;
     }
 
     .nav-left h1 {

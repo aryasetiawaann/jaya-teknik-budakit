@@ -1,8 +1,8 @@
 <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
     <a href="/">
         <div class="nav-left">
-            <img src="/assets/header/logo.png" alt="logo">
-            <h1>JAYA TEKNIK GLOBAL</h1>
+            <img src="/assets/header/logo-new.png" alt="logo">
+            {{-- <h1>JAYA TEKNIK GLOBAL</h1> --}}
         </div>
     </a>
     <div class="nav-right">
