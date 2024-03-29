@@ -42,9 +42,9 @@ class PhoneNumberPolicy
             $phone = PhoneNumber::get()->first();
 
             if ($phone) {
-                return true;
-            } else {
                 return false;
+            } else {
+                return true;
             }
         } else {
             return abort(403, 'Unauthorized action.');

@@ -91,7 +91,8 @@ class ProductResource extends Resource
                 TextColumn::make('category.name')
                     ->label('Category')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->hint('Buat kategori terlebih dahulu jika belum ada di list'),
                 TextColumn::make('url')->limit(15),
                 TextColumn::make('description')->limit(15),
                 TextColumn::make('spesification')->limit(15),

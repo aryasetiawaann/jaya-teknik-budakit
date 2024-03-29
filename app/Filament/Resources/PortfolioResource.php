@@ -14,6 +14,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Validation\ValidationException;
@@ -35,12 +36,28 @@ class PortfolioResource extends Resource
                     ->label('Title')
                     ->required()
                     ->autofocus(),
-                TextArea::make('description')
+                RichEditor::make('description')
                     ->label('Description')
                     ->required()
-                    ->autosize()
-                    ->minLength(5)
-                    ->maxLength(255),
+                    ->toolbarButtons([
+                        'attachFiles',
+                        'blockquote',
+                        'bold',
+                        'bulletList',
+                        'codeBlock',
+                        'h2',
+                        'h3',
+                        'italic',
+                        'link',
+                        'orderedList',
+                        'redo',
+                        'strike',
+                        'underline',
+                        'undo',
+                    ])
+                    ->fileAttachmentsDisk('s3')
+                    ->fileAttachmentsDirectory('attachments')
+                    ->fileAttachmentsVisibility('private'),
                 FileUpload::make('image')
                     ->label('Image')
                     ->required(),
@@ -57,8 +74,7 @@ class PortfolioResource extends Resource
                     ->sortable(),
                 TextColumn::make('description')
                     ->label('Description')
-                    ->searchable()
-                    ->sortable(),
+                    ->limit(15),
                 ImageColumn::make('image')
                     ->label('Image')
                     ->size(40),

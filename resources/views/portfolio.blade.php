@@ -36,7 +36,11 @@
         </div>
 
         <div class="content">
-            <p>{{ $porto->description }}</p>
+            <p>
+                @php
+                    echo $porto->description;
+                @endphp
+            </p>
         </div>
 
     </div>
