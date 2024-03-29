@@ -27,10 +27,10 @@ class DetailProduk extends Controller
 
     public function sendWhatsapp($id)
     {
+        $phone = PhoneNumber::get()->first();
         $product = Product::where('id', $id)->first();
-
+        
         try {
-            $phone = PhoneNumber::get()->first();
             $random_cs = $phone->number;
         } catch (Exception $e) {
             $random_cs = "628997600661";
