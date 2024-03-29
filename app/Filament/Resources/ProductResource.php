@@ -45,7 +45,8 @@ class ProductResource extends Resource
                     ->searchable(),
                 TextInput::make('url')
                     ->label('Url')
-                    ->required(),
+                    ->required()
+                    ->rules('starts_with:https://', true),
                 Textarea::make('description')
                     ->label('Description')
                     ->required()

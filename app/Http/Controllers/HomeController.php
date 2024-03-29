@@ -24,13 +24,19 @@ class HomeController extends Controller
     {
         $product = Product::where('category_id', $id)->paginate(8);
         $category = Category::all();
+        $porto = Portfolio::all();
 
-        return view('home')->with('product', $product)->with('category', $category);
+        return view('home')->with('product', $product)->with('category', $category)->with('porto', $porto);
     }
 
     public function sendWhatsapp(Request $request){
         $phone = PhoneNumber::get()->first();
-        $random_cs = $phone->number;
+
+        if ($phone->number) {
+            $random_cs = $phone->number;
+        } else {
+            $phone = "628997600661";
+        }
 
         $name = $request->input('nama');
         $email = $request->input('email');
