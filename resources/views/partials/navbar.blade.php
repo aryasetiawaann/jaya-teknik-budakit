@@ -7,18 +7,18 @@
     </a>
     <div class="nav-right">
         <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#benefit">Benefit</a></li>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="/#">Beranda</a></li>
+            <li><a href="/#benefit">Benefit</a></li>
+            <li><a href="/#produk">Produk</a></li>
+            <li><a href="/#kontak">Kontak</a></li>
         </ul>
     </div>
     <div class="nav-bars">
         <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#benefit">Benefit</a></li>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="/#">Beranda</a></li>
+            <li><a href="/#benefit">Benefit</a></li>
+            <li><a href="/#produk">Produk</a></li>
+            <li><a href="/#kontak">Kontak</a></li>
         </ul>
     </div>
     <svg class="closed" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
