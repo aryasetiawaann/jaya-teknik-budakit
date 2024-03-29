@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\User;
 use App\Models\PhoneNumber;
+use Carbon\Exceptions\Exception;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Auth;
 
@@ -39,11 +40,14 @@ class PhoneNumberPolicy
     public function create(User $user): bool
     {
         if (Auth::check()) {
-            $phone = PhoneNumber::get()->first();
-
-            if ($phone->number) {
-                return true;
-            } else {
+            try {
+                $phone = PhoneNumber::get()->first();
+                if ($phone->number) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (Exception $e) {
                 return false;
             }
         } else {
