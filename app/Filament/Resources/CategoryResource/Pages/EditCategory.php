@@ -17,7 +17,7 @@ class EditCategory extends EditRecord
         ];
     }
 
-    protected function canEdit(): bool
+    protected function canDelete(): bool
     {
         $product = $this->record;
 
@@ -27,7 +27,7 @@ class EditCategory extends EditRecord
         }
 
         // Call parent method to maintain other checks
-        return parent::canEdit();
+        return parent::canDelete();
     }
 
     // public function mount($record): void
