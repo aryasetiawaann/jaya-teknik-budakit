@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Portfolio;
 use App\Models\PhoneNumber;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,9 @@ class HomeController extends Controller
     {
         $product = Product::paginate(8);
         $category = Category::all();
+        $porto = Portfolio::all();
 
-        return view('home')->with('product', $product)->with('category', $category);
+        return view('home')->with('product', $product)->with('category', $category)->with('porto', $porto);
     }
 
     public function show($id)
