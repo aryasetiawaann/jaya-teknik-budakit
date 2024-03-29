@@ -17,18 +17,18 @@ class EditCategory extends EditRecord
         ];
     }
 
-    protected function canDelete(): bool
-    {
-        $product = $this->record;
+    // protected function canDelete(): bool
+    // {
+    //     $product = $this->record;
 
-        if ($product && $product->isReferencedElsewhere()) {
-            // Product is referenced elsewhere, disallow editing
-            return false;
-        }
+    //     if ($product && $product->isReferencedElsewhere()) {
+    //         // Product is referenced elsewhere, disallow editing
+    //         return false;
+    //     }
 
-        // Call parent method to maintain other checks
-        return parent::canDelete();
-    }
+    //     // Call parent method to maintain other checks
+    //     return parent::canDelete();
+    // }
 
     // public function mount($record): void
     // {

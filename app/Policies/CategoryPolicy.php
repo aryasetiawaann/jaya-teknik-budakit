@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -64,7 +65,13 @@ class CategoryPolicy
     public function delete(User $user, Category $category): bool
     {
         if (Auth::check()) {
-            return true;
+            $isNull = Product::where('category_id', $category->id)->get();
+
+            if($isNull->isEmpty()) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return abort(403, 'Unauthorized action.');
         }

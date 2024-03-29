@@ -4,7 +4,6 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Product;
 use App\Models\Category;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
@@ -28,12 +27,12 @@ class CategoryResource extends Resource
         return $form
             ->schema([
                 Card::make()
-                    ->schema([
-                        TextInput::make('name')
-                            ->label('name')
-                            ->required()
-                            ->unique(ignorable: fn ($record) => $record)
-                    ])
+                ->schema([
+                    TextInput::make('name')
+                    ->label('name')
+                    ->required()
+                    ->unique(ignorable: fn($record) => $record)
+                ])
             ]);
     }
 
@@ -42,8 +41,8 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable()
-                    ->sortable()
+                ->searchable()
+                ->sortable()
             ])
             ->filters([
                 //
@@ -74,6 +73,4 @@ class CategoryResource extends Resource
             'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
     }
-
-    
 }
