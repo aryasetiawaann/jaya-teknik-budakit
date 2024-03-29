@@ -44,7 +44,8 @@ class ProductResource extends Resource
                     ->relationship('category', 'name')
                     ->searchable(),
                 TextInput::make('url')
-                    ->label('Url'),
+                    ->label('Url')
+                    ->required(),
                 Textarea::make('description')
                     ->label('Description')
                     ->required()
