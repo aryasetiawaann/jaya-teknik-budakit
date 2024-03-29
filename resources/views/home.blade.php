@@ -38,7 +38,7 @@
                     Dunia Pompa Air Bersama Kami</p>
                 <div class="hero-button" data-aos="fade-up" data-aos-duration="1000">
                     <a href="https://tokopedia.link/bjYCI0x4QHb" target="_blank">
-                        <button href="https://tokopedia.link/bjYCI0x4QHb" class="hero-order-btn">Order Sekarang <svg
+                        <button class="hero-order-btn">Order Sekarang <svg
                                 width="29" height="25" viewBox="0 0 29 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_0_38)">
@@ -153,7 +153,7 @@
                     @if ($item->images->first() == null)
                         <img src="/assets/default.png" alt="default">
                     @else
-                        <img src="/storage/{{ $item->images->first()->url }}" alt="produk">
+                        <img src="{{ Storage:url($item->images->first()->url) }}" alt="produk">
                     @endif
                     <div class="card-desc">
                         <p class="card-nama">{{ $item['name'] }}</p>
