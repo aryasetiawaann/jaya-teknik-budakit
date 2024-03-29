@@ -62,28 +62,77 @@
         </div>
     </section>
 
-    <section class="benefit" id="benefit">
-        <h1>Murah, Original, Awet BANGET</h1>
-        <p>Menyediakan Keunggulan dalam Aliran Kualitas: Menjadi Mitra Pilihan sebagai Suplier Pompa Terbaik di Seluruh
-            Indonesia</p>
-        <div class="benefit-list">
+    <section class="porto" id="benefit">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere in nostrum, aspernatur est asperiores vel.</p>
+        <div class="porto-list">
             @php
                 $delay = 50;
             @endphp
-            @for ($i = 0; $i < 3; $i++)
-                <div class="benefit-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="{{ $delay }}">
-                    <div class="benefit-item-img-base">
+            <svg class="porto-icon" id="left" xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-chevron-left">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <div class="inner-porto">
+                <a href="#" class="porto-item">
+                    <div class="porto-item-img-base">
                         <img src="/assets/anime.jpg" alt="">
                     </div>
-                    <h3>Benefit 1</h3>
-                    <p>Menyediakan Keunggulan dalam Aliran Kualitas: Menjadi Mitra Pilihan sebagai Suplier Pompa Terbaik
-                        di Seluruh Indonesia</p>
-                </div>
+                    <h3>Portofolio 1</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, tempora!</p>
+                </a>
+                <a href="#" class="porto-item">
+                    <div class="porto-item-img-base">
+                        <img src="/assets/anime.jpg" alt="">
+                    </div>
+                    <h3>Portofolio 1</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, tempora!</p>
+                </a>
+                <a href="#" class="porto-item">
+                    <div class="porto-item-img-base">
+                        <img src="/assets/anime.jpg" alt="">
+                    </div>
+                    <h3>Portofolio 1</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, tempora!</p>
+                </a>
+                <a href="#" class="porto-item">
+                    <div class="porto-item-img-base">
+                        <img src="/assets/anime.jpg" alt="">
+                    </div>
+                    <h3>Portofolio 1</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, tempora!</p>
+                </a>
+                <a href="#" class="porto-item">
+                    <div class="porto-item-img-base">
+                        <img src="/assets/anime.jpg" alt="">
+                    </div>
+                    <h3>Portofolio 1</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, tempora!</p>
+                </a>
+                <a href="#" class="porto-item">
+                    <div class="porto-item-img-base">
+                        <img src="/assets/anime.jpg" alt="">
+                    </div>
+                    <h3>Portofolio 1</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, tempora!</p>
+                </a>
+                
+            </div>
+            <svg class="porto-icon" id="right" xmlns="http://www.w3.org/2000/svg" width="52" height="52"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
              @php
                 $delay+=100;
             @endphp
-            @endfor
         </div>
+        <button class="porto-button">
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <p>Company Profile</p></button>
+        </a>
     </section>
 
     <section class="produk" id="produk">
@@ -190,18 +239,6 @@
             });
         });
     });});
-
-    // $('.kategori').click(function() {
-    //     // let category_id = $(this).data('id');
-
-    //     // var url = window.location.pathname;
-    //     // var newUrl = url.split('/');
-    //     // var id = newUrl[newUrl.length - 1];
-
-    //     // console.log(id);
-
-    //     $(this).style.display = "none";
-    // }) 
-  </script>
+</script>
 
 </html>

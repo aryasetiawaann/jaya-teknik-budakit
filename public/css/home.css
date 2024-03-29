@@ -92,8 +92,8 @@ textarea {
     margin-left: 40px;
 }
 
-/* ------------- BENEFIT SECTION ------------- */
-.benefit {
+/* ------------- PORTOFOLIO SECTION ------------- */
+.porto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,32 +104,69 @@ textarea {
     scroll-margin-top: 85px;
 }
 
-.benefit h1,
-.benefit p {
+.porto h1,
+.porto p {
     width: 600px;
 }
 
-.benefit h1 {
+.porto h1 {
     font-weight: bold;
     font-size: 50px;
 }
 
-.benefit p {
+.porto p {
     font-size: 16px;
 }
 
-.benefit-list {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 60px;
+.porto-list {
+    position: relative;
+    gap: 30px;
+    max-width: 80%;
+    overflow-x: hidden;
 }
 
-.benefit-item {
+.inner-porto {
+    display: flex;
+    gap: 30px;
+    display: flex;
+    overflow: hidden;
+    padding: 0 60px;
+    padding-bottom: 60px;
+}
+
+.porto-icon {
+    color: #ffffff;
+    background-color: #0045a2;
+    transition: 0.3s ease;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    cursor: pointer;
+    transition: ease 0.3s;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.porto-icon:first-child {
+    left: 0;
+}
+
+.porto-icon:last-child {
+    right: 0;
+}
+
+.porto-icon:hover {
+    color: #424242;
+}
+
+.porto-item {
     width: 300px;
     margin-top: 60px;
 }
 
-.benefit-item-img-base {
+.porto-item-img-base {
     width: 300px;
     height: 160px;
     border-radius: 10px;
@@ -139,21 +176,48 @@ textarea {
     -moz-box-shadow: 0px 0px 30px -12px rgba(0, 0, 0, 1);
 }
 
-.benefit-item img {
+.porto-item img {
     width: 300px;
     height: 160px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.benefit h3 {
+.porto h3 {
     text-align: start;
     margin-top: 30px;
 }
 
-.benefit-item p {
+.porto-item p {
     width: unset;
     text-align: start;
+}
+
+.porto-button {
+    width: 210px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #0045a2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.porto-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.porto-button:hover {
+    scale: 1.03;
+}
+
+.porto-button p {
+    width: auto;
 }
 
 /* ------------- PRODUK SECTION ------------- */
@@ -491,23 +555,29 @@ textarea {
     }
 
     .hero-left h1,
-    .benefit h1 {
+    .porto h1 {
         font-size: 40px;
     }
 
-    .benefit {
+    .porto {
         padding: 50px;
     }
 
-    .benefit-list {
-        flex-direction: column;
-        gap: 0;
+    .porto-list {
+        max-width: 98%;
     }
 
-    .benefit p,
-    .benefit h3 {
+    .porto-icon {
+        width: 40px;
+    }
+    .porto p,
+    .porto h3 {
         margin-top: 10px;
         text-align: center;
+    }
+
+    .porto-button p {
+        margin-top: 0;
     }
 
     .inner-kategori .kategori {
@@ -573,7 +643,7 @@ textarea {
     }
 
     .hero-left h1,
-    .benefit h1,
+    .porto h1,
     .produk h1,
     .kontak h1 {
         font-size: 24px;
@@ -599,16 +669,34 @@ textarea {
         width: 20px;
     }
 
-    .benefit {
+    .porto {
         padding: 50px 15px;
     }
 
-    .benefit p {
+    .inner-porto {
+        gap: 15px;
+    }
+
+    .porto-item {
+        width: 200px;
+    }
+
+    .porto-item-img-base {
+        width: 200px;
+        height: 120px;
+    }
+
+    .porto-item img {
+        width: 200px;
+        height: 120px;
+    }
+
+    .porto p {
         font-size: 12px;
     }
 
-    .benefit h1,
-    .benefit p {
+    .porto h1,
+    .porto p {
         width: unset;
     }
 
@@ -695,14 +783,22 @@ textarea {
         width: 300px;
     }
 
-    .benefit-item,
-    .benefit-item-img-base,
-    .benefit-item img {
-        width: 100%;
+    .porto-item {
+        width: 190px;
+    }
+
+    .porto-item-img-base {
+        width: 190px;
+        height: 100px;
+    }
+
+    .porto-item img {
+        width: 190px;
+        height: 100px;
     }
 
     .card-produk {
-        width: 120px;
+        width: 100px;
         padding: 6px 12px 12px;
         border-radius: 10px;
     }
