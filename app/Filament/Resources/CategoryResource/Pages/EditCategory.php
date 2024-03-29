@@ -30,12 +30,12 @@ class EditCategory extends EditRecord
         return parent::canEdit();
     }
 
-    public function mount($record): void
-    {
-        parent::mount($record);
+    // public function mount($record): void
+    // {
+    //     parent::mount($record);
 
-        if (!$this->canEdit()) {
-            $this->notify('danger', 'This product cannot be edited because it is referenced in other records.');
-        }
-    }
+    //     if (!$this->canEdit()) {
+    //         $this->notify('danger', 'This product cannot be edited because it is referenced in other records.');
+    //     }
+    // }
 }
