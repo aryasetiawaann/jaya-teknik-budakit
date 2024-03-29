@@ -46,7 +46,8 @@ class ProductResource extends Resource
                 TextInput::make('url')
                     ->label('Url')
                     ->required()
-                    ->rules('starts_with:https://', true),
+                    ->rules('starts_with:https://', true)
+                    ->hint('Url produk tokopedia, awali dengan https://'),
                 Textarea::make('description')
                     ->label('Description')
                     ->required()
@@ -124,6 +125,4 @@ class ProductResource extends Resource
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
-
-    
 }

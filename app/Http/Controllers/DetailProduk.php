@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\PhoneNumber;
 use Illuminate\Http\Request;
+use Carbon\Exceptions\Exception;
 
 class DetailProduk extends Controller
 {
@@ -28,10 +29,11 @@ class DetailProduk extends Controller
     {
         $phone = PhoneNumber::get()->first();
         $product = Product::where('id', $id)->first();
-        if ($phone->number) {
+        
+        try {
             $random_cs = $phone->number;
-        } else {
-            $phone = "628997600661";
+        } catch (Exception $e) {
+            $random_cs = "628997600661";
         }
 
         $text = urlencode("Halo, saya tertarik dengan produk " . $product->name . " yang ada di toko Anda. Apakah masih tersedia?");

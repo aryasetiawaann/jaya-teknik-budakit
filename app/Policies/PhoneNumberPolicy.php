@@ -39,7 +39,13 @@ class PhoneNumberPolicy
     public function create(User $user): bool
     {
         if (Auth::check()) {
-            return false;
+            $phone = PhoneNumber::get()->first();
+
+            if ($phone->number) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return abort(403, 'Unauthorized action.');
         }
