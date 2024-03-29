@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/css/navbar.css">
     <script src="/app.js" defer></script>
 
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -160,10 +162,6 @@
                     <label for="email">Email</label>
                     <input type="email" name="email" placeholder="Masukan email">
                 </div>
-            </div>
-            <div class="kontak-mid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                <label for="subjek">Subjek</label>
-                <input type="text" name="subjek" placeholder="Masukan subjek">
             </div>
             <div class="kontak-bottom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
                 <label for="pesan">Pesan</label>

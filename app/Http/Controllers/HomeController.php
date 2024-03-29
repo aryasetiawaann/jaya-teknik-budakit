@@ -30,15 +30,15 @@ class HomeController extends Controller
         $phone = PhoneNumber::get()->first();
         $random_cs = $phone->number;
 
-        $name = $request->input('name');
+        $name = $request->input('nama');
         $email = $request->input('email');
-        $message = $request->input('message');
+        $message = $request->input('pesan');
 
-        $text = urlencode("Halo, saya ${name} Email saya: ${email} Pertanyaan: ${message}");
+        $text = urlencode("Halo, saya $name\nEmail saya: $email\nPertanyaan: $message");
 
-        $url_wa = "https://web.whatsapp.com/send?phone=${random_cs}&text=${text}";
+        $url_wa = "https://web.whatsapp.com/send?phone=$random_cs&text=$text";
         if(preg_match('/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i', $_SERVER['HTTP_USER_AGENT'])) {
-            $url_wa = "whatsapp://send?phone=${random_cs}&text=${text}";
+            $url_wa = "whatsapp://send?phone=$random_cs&text=$text";
         }
 
         header("Location: $url_wa");
