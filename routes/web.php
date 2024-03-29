@@ -6,6 +6,7 @@ use App\Http\Controllers\DetailProduk;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\PortfolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,8 @@ Route::get('/download', function () {
         return response('');
     }
 });
+
+Route::get('/portfolio/{id}', [PortfolioController::class, 'index']);
 
 Route::get('/nama-produk', [DetailProduk::class, 'index']);
 Route::get('/{name}', [DetailProduk::class, 'detail']);

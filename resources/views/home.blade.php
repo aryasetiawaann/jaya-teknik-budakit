@@ -79,7 +79,7 @@
             </svg>
             <div class="inner-porto">
                 @foreach ($porto as $item)
-                    <a href="#" class="porto-item">
+                    <a href="/portfolio/{{ $item->title }}" class="porto-item">
                         <div class="porto-item-img-base">
                             <img src="/storage/{{ $item->image }}" alt="">
                         </div>

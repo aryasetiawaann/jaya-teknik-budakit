@@ -11,9 +11,10 @@ class PortfolioController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($title)
     {
-        //
+        $porto = Portfolio::get()->where('title', $title)->first();
+        return view('portfolio', compact('porto'));
     }
 
     /**

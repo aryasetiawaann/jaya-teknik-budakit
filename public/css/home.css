@@ -118,6 +118,15 @@ textarea {
     font-size: 16px;
 }
 
+.porto-item p {
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
 .porto-list {
     position: relative;
     gap: 30px;

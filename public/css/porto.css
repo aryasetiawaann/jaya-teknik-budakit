@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.porto {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 63vh;
+}
+
+.porto img {
+    width: 95%;
+    height: 650px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.head {
+    width: 100%;
+    padding: 40px 100px;
+}
+
+.head h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.head p {
+    margin-top: 10px;
+    color: rgb(96, 96, 96);
+    font-weight: 500;
+}
+
+.content {
+    padding: 0 100px 60px 100px;
+    text-align: justify;
+}
+@media screen and (width <= 1000px) {
+    .porto img {
+        height: 350px;
+    }
+
+}
+
+@media screen and (width <= 700px) { 
+    .porto img {
+        height: 250px;
+    }
+
+    .head {
+        width: 100%;
+        padding: 40px 30px;
+    }
+
+    .head h1 {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .content {
+        padding: 0 30px 50px 30px;
+        text-align: justify;
+    }
+}
