@@ -84,9 +84,9 @@
                         <p>
                             @php
                                 $words = explode(' ', $item->description);
-                                $description = implode(' ', array_slice($words, 5, 20));
+                                $description = implode(' ', array_slice($words, 5, 10));
+                                echo $description;
                             @endphp
-                            {{ $description }}
                         </p>
                     </a>
                 @endforeach
