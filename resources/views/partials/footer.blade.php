@@ -21,7 +21,7 @@
             <li><a href="/#produk">Produk & Layanan</a></li>
             <li><a href="/#kontak">Kontak</a></li>
         </ul>
-        <p>© Jaya Teknik Global 2024</p>
+        <p>© Teknik Hub 2024</p>
     </div>
 
     <div class="footer-right">
