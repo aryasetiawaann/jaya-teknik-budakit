@@ -83,8 +83,11 @@
                         <h3>{{ $item->title }}</h3>
                         <p>
                             @php
-                                echo $item->description;
-                            @endphp</p>
+                                $words = explode(' ', $item->description);
+                                $description = implode(' ', array_slice($words, 0, 10));
+                            @endphp
+                            {{ $description }}
+                        </p>
                     </a>
                 @endforeach
             </div>
