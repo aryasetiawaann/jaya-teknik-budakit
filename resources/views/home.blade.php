@@ -62,7 +62,7 @@
     </section>
 
     <section class="porto" id="benefit">
-        <h3>Lorem ipsum dolor sit.</h3>
+        <h1>Lorem ipsum dolor sit.</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere in nostrum, aspernatur est asperiores vel.
         </p>
         <div class="porto-list">
@@ -81,7 +81,10 @@
                             <img src="/storage/{{ $item->image }}" alt="">
                         </div>
                         <h3>{{ $item->title }}</h3>
-                        <p>{{ $item->description }}</p>
+                        <p>
+                            @php
+                                echo $item->description;
+                            @endphp</p>
                     </a>
                 @endforeach
             </div>

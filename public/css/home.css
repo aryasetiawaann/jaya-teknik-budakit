@@ -104,12 +104,12 @@ textarea {
     scroll-margin-top: 85px;
 }
 
-.porto h3,
+.porto h1,
 .porto p {
     width: 600px;
 }
 
-.porto h3 {
+.porto h1 {
     font-weight: bold;
     font-size: 50px;
 }
@@ -192,7 +192,7 @@ textarea {
     border-radius: 10px;
 }
 
-.porto h3 {
+.porto h1 {
     text-align: start;
     margin-top: 30px;
 }
@@ -564,7 +564,7 @@ textarea {
     }
 
     .hero-left h1,
-    .porto h3 {
+    .porto h1 {
         font-size: 40px;
     }
 
@@ -580,7 +580,7 @@ textarea {
         width: 40px;
     }
     .porto p,
-    .porto h3 {
+    .porto h1 {
         margin-top: 10px;
         text-align: center;
     }
@@ -652,7 +652,7 @@ textarea {
     }
 
     .hero-left h1,
-    .porto h3,
+    .porto h1,
     .produk h1,
     .kontak h1 {
         font-size: 24px;
@@ -704,7 +704,7 @@ textarea {
         font-size: 12px;
     }
 
-    .porto h3,
+    .porto h1,
     .porto p {
         width: unset;
     }
