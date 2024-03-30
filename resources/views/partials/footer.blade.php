@@ -2,7 +2,7 @@
     
     <div class="footer-left">
         <div class="footer-logo">
-            <img src="/assets/header/logo-white.png" alt="">
+            <img src="/assets/header/logo-white.webp" alt="">
             {{-- <p>JAYA TEKNIK GLOBAL</p> --}}
         </div>
         <div class="footer-location">
