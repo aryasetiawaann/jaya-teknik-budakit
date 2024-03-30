@@ -58,7 +58,7 @@ class HomeController extends Controller
 
     public function download()
     {
-        $path = public_path('profile.pdf');
+        $path = public_path('CompanyProfile.pdf');
 
         if (!File::exists($path)) {
             abort(404);
@@ -70,7 +70,7 @@ class HomeController extends Controller
         $response = Response::make($file, 200);
         $response->header("Content-Type", $type);
 
-        $response->header("Content-Disposition", 'attachment; filename="profile.pdf"');
+        $response->header("Content-Disposition", 'attachment; filename="CompanyProfile.pdf"');
 
         return $response;
     }
