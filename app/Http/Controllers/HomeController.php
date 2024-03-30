@@ -56,12 +56,8 @@ class HomeController extends Controller
 
     public function download()
     {
-        $path = storage_path('/storage/profile.pdf');
+        $path = "https://teknikhub.id/storage/profile.pdf";
 
-        if (file_exists($path)) {
-            return response()->download($path);
-        } else {
-            return "kosong";
-        }
+        return response()->download($path);
     }
 }
