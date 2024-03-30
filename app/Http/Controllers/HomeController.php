@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\Portfolio;
 use App\Models\PhoneNumber;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 
 class HomeController extends Controller
 {
@@ -56,8 +58,20 @@ class HomeController extends Controller
 
     public function download()
     {
-        $path = "https://teknikhub.id/storage/profile.pdf";
+        $path = storage_path('storage/profile.pdf');
 
-        return response()->download($path);
+        if (!File::exists($path)) {
+            abort(404);
+        }
+
+        $file = File::get($path);
+        $type = File::mimeType($path);
+
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+
+        $response->header("Content-Disposition", 'attachment; filename="profile.pdf"');
+
+        return $response;
     }
 }
