@@ -41,9 +41,9 @@ class HomeController extends Controller
             $phone = "628997600661";
         }
 
-        $name = $request->input('nama');
-        $email = $request->input('email');
-        $message = $request->input('pesan');
+        $name = htmlspecialchars($request->input('nama'));
+        $email = htmlspecialchars($request->input('email'));
+        $message = htmlspecialchars($request->input('pesan'));
 
         $text = urlencode("Halo, saya $name\nEmail saya: $email\nPertanyaan: $message");
 
