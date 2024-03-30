@@ -27,7 +27,7 @@
     <div class="footer-right">
         <div class="right-media">
             <a href="https://www.instagram.com/teknikhub.id?igsh=MWdzNjNmZmg4cDh6eg=="><img src="/assets/instagram.png" alt="instagram"></a>
-            <a href="wa.me/628997600661"><img src="/assets/whatsapp.png" alt="whatsapp"></a>
+            <a href="https://wa.me/628997600661"><img src="/assets/whatsapp.png" alt="whatsapp"></a>
             <a href=""><img src="/assets/email.png" alt="email"></a>
         </div>
         <p>0899 7600 661</p>
