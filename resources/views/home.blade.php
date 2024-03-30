@@ -84,7 +84,7 @@
                         <p>
                             @php
                                 $words = explode(' ', $item->description);
-                                $description = implode(' ', array_slice($words, 5, 10));
+                                $description = implode(' ', array_slice($words, 5, 20));
                                 echo $description;
                             @endphp
                         </p>
