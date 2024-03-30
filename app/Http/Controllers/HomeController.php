@@ -29,7 +29,8 @@ class HomeController extends Controller
         return view('home')->with('product', $product)->with('category', $category)->with('porto', $porto);
     }
 
-    public function sendWhatsapp(Request $request){
+    public function sendWhatsapp(Request $request)
+    {
         $phone = PhoneNumber::get()->first();
 
         if ($phone) {
@@ -45,11 +46,22 @@ class HomeController extends Controller
         $text = urlencode("Halo, saya $name\nEmail saya: $email\nPertanyaan: $message");
 
         $url_wa = "https://web.whatsapp.com/send?phone=$random_cs&text=$text";
-        if(preg_match('/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i', $_SERVER['HTTP_USER_AGENT'])) {
+        if (preg_match('/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i', $_SERVER['HTTP_USER_AGENT'])) {
             $url_wa = "whatsapp://send?phone=$random_cs&text=$text";
         }
 
         header("Location: $url_wa");
         exit();
+    }
+
+    public function download()
+    {
+        $path = storage_path('/storage/profile.pdf');
+
+        if (file_exists($path)) {
+            return response()->download($path);
+        } else {
+            return "kosong";
+        }
     }
 }

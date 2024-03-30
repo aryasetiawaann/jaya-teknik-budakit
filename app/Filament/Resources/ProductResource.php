@@ -42,7 +42,8 @@ class ProductResource extends Resource
                     ->required()
                     ->preload()
                     ->relationship('category', 'name')
-                    ->searchable(),
+                    ->searchable()
+                    ->hint('Buat kategori terlebih dahulu jika belum ada di list'),
                 TextInput::make('url')
                     ->label('Url')
                     ->required()
@@ -91,8 +92,7 @@ class ProductResource extends Resource
                 TextColumn::make('category.name')
                     ->label('Category')
                     ->searchable()
-                    ->sortable()
-                    ->hint('Buat kategori terlebih dahulu jika belum ada di list'),
+                    ->sortable(),
                 TextColumn::make('url')->limit(15),
                 TextColumn::make('description')->limit(15),
                 TextColumn::make('spesification')->limit(15),

@@ -23,15 +23,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/category/{id}', [HomeController::class, 'show']);
 Route::post('/hubungi', [HomeController::class, 'sendWhatsapp']);
 
-Route::get('/download', function () {
-    $path = storage_path('/storage/profile.pdf');
-
-    if (file_exists($path)) {
-        return response()->download($path);
-    } else {
-        return response('');
-    }
-});
+Route::get('/download', [HomeController::class, 'download']);
 
 Route::get('/portfolio/{id}', [PortfolioController::class, 'index']);
 

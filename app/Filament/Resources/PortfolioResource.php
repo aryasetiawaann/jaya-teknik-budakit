@@ -72,12 +72,12 @@ class PortfolioResource extends Resource
                     ->label('Title')
                     ->searchable()
                     ->sortable(),
+                ImageColumn::make('image')
+                    ->label('Image')
+                    ->size(40),        
                 TextColumn::make('description')
                     ->label('Description')
                     ->limit(15),
-                ImageColumn::make('image')
-                    ->label('Image')
-                    ->size(40),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
