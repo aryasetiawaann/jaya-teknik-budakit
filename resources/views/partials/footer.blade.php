@@ -17,11 +17,11 @@
     <div class="footer-middle">
         <ul>
             <li><a href="/#">Beranda</a></li>
-            <li><a href="/#benefit">Benefit</a></li>
-            <li><a href="/#produk">Produk</a></li>
+            <li><a href="/#benefit">Portofolio</a></li>
+            <li><a href="/#produk">Produk & Layanan</a></li>
             <li><a href="/#kontak">Kontak</a></li>
         </ul>
-        <p>© Jaya Teknik Global 2024</p>
+        <p>© Teknik Hub 2024</p>
     </div>
 
     <div class="footer-right">
