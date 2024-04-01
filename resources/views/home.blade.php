@@ -31,9 +31,9 @@
         <div class="hero">
             <div class="hero-left">
                 <h1 data-aos="fade-up" data-aos-duration="1000">ONE-STOP Solution <br> Teknik Company </h1>
-                <p data-aos="fade-up" data-aos-duration="1000">Melangkah Bersama Menuju Kehidupan Lebih Berkualitas dan
-                    Sejuk. Temukan Solusi Terbaik Anda dalam
-                    Dunia Pompa Air Bersama Kami</p>
+                <p data-aos="fade-up" data-aos-duration="1000">PT. Teknik Hub Indonesia is a leading One-Stop Solution provider offering a comprehensive array of engineering services. 
+                    Specializing in Electrical Mechanical, Construction Service, General Trading, and Suppliers, as well as Web Development, 
+                    we deliver tailored solutions to address your specific requirements</p>
                 <div class="hero-button" data-aos="fade-up" data-aos-duration="1000">
                     <a href="https://tokopedia.link/16I4HNAImIb" target="_blank">
                         <button class="hero-order-btn">Order Sekarang <svg width="29" height="25"
