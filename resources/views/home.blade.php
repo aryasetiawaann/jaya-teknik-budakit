@@ -30,7 +30,7 @@
 
         <div class="hero">
             <div class="hero-left">
-                <h1 data-aos="fade-up" data-aos-duration="1000">ONE-STOP Solution Teknik Company </h1>
+                <h1 data-aos="fade-up" data-aos-duration="1000">ONE-STOP Solution <br> Teknik Company </h1>
                 <p data-aos="fade-up" data-aos-duration="1000">Melangkah Bersama Menuju Kehidupan Lebih Berkualitas dan
                     Sejuk. Temukan Solusi Terbaik Anda dalam
                     Dunia Pompa Air Bersama Kami</p>
