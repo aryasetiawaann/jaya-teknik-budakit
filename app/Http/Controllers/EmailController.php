@@ -16,7 +16,7 @@ class EmailController extends Controller
             'pesan' => $request->pesan
         ];
 
-        $tujuan = "budakit.id@gmail.com";
+        $tujuan = "marketing@teknikhub.id";
 
         Mail::to($tujuan)->send(new sendEmail($data));
 
