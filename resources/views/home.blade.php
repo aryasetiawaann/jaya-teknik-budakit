@@ -62,7 +62,7 @@
     </section>
 
     <section class="porto" id="benefit">
-        <h1>PORTOFOLIO</h1>
+        <h1 style="text-align: center;">PORTOFOLIO</h1>
         <p>With a dedicated team of professionals and a commitment to excellence, we strive to deliver high-quality services and innovative solutions that drive success for our clients. 
             From electrical maintenance and construction to hydraulic equipment supply and web development, Teknik Hub Indonesia is your trusted partner for all your engineering needs. 
         </p>
