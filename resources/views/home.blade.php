@@ -62,8 +62,9 @@
     </section>
 
     <section class="porto" id="benefit">
-        <h1>Lorem ipsum dolor sit.</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere in nostrum, aspernatur est asperiores vel.
+        <h1>PORTOFOLIO Kami</h1>
+        <p>With a dedicated team of professionals and a commitment to excellence, we strive to deliver high-quality services and innovative solutions that drive success for our clients. 
+            From electrical maintenance and construction to hydraulic equipment supply and web development, Teknik Hub Indonesia is your trusted partner for all your engineering needs. 
         </p>
         <div class="porto-list">
             @php
