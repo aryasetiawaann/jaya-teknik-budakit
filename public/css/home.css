@@ -643,6 +643,10 @@ textarea {
 }
 
 @media screen and (width <= 700px) {
+    .hero-image {
+        width: 100%;
+    }
+
     .hero {
         margin-bottom: 60px;
     }
@@ -788,10 +792,6 @@ textarea {
 }
 
 @media screen and (width <= 350px) {
-    .hero-image {
-        width: 300px;
-    }
-
     .porto-item {
         width: 190px;
     }
