@@ -161,6 +161,7 @@ footer a {
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-left: 0;
     }
 
     .footer-location p {
