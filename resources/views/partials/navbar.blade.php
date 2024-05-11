@@ -7,10 +7,10 @@
     </a>
     <div class="nav-right">
         <ul>
-            <li><a href="/#">Beranda</a></li>
-            <li><a href="/#benefit">Portofolio</a></li>
-            <li><a href="/#produk">Produk & Layanan</a></li>
-            <li><a href="/#kontak">Kontak</a></li>
+            <li><a href="/#">Home</a></li>
+            <li><a href="/#benefit">Portfolio</a></li>
+            <li><a href="/#produk">Products & services</a></li>
+            <li><a href="/#kontak">Contact</a></li>
         </ul>
     </div>
     <div class="nav-bars">
