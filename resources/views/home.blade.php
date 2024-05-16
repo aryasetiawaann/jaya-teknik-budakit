@@ -35,8 +35,8 @@
                     Specializing in Electrical Mechanical, Construction Service, General Trading, and Suppliers, as well as Web Development, 
                     we deliver tailored solutions to address your specific requirements</p>
                 <div class="hero-button" data-aos="fade-up" data-aos-duration="1000">
-                    <a href="https://tokopedia.link/16I4HNAImIb" target="_blank">
-                        <button class="hero-order-btn">Order Sekarang <svg width="29" height="25"
+                    <a href="https://wa.me/628997600661" target="_blank">
+                        <button class="hero-order-btn">Tanya Kami <svg width="29" height="25"
                                 viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_0_38)">
                                     <path
