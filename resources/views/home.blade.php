@@ -36,7 +36,7 @@
                     we deliver tailored solutions to address your specific requirements</p>
                 <div class="hero-button" data-aos="fade-up" data-aos-duration="1000">
                     <a href="https://wa.me/628997600661" target="_blank">
-                        <button class="hero-order-btn">Tanya Kami <svg width="29" height="25"
+                        <button class="hero-order-btn">Contact Us <svg width="29" height="25"
                                 viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_0_38)">
                                     <path
@@ -181,7 +181,7 @@
     <form action="/hubungi" method="POST">
         @csrf
         <section class="kontak" id="kontak">
-            <h1>Hubungi Kami</h1>
+            <h1>Contact Us</h1>
             <div class="kontak-top" data-aos="fade-up" data-aos-duration="1000">
                 <div class="top-nama">
                     <label for="nama">Nama</label>
