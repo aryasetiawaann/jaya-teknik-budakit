@@ -31,12 +31,11 @@
         <div class="hero">
             <div class="hero-left">
                 <h1 data-aos="fade-up" data-aos-duration="1000"> ONE-STOP SOLUTION <br> Electrical Mechanical Services Construction Services General Trading and Suppliers Industry </h1>
-                <p data-aos="fade-up" data-aos-duration="1000">PT. Teknik Hub Indonesia is a leading One-Stop Solution provider offering a comprehensive array of engineering services. 
-                    Specializing in Electrical Mechanical, Construction Service, General Trading, and Suppliers, as well as Web Development, 
-                    we deliver tailored solutions to address your specific requirements</p>
+                <p data-aos="fade-up" data-aos-duration="1000">PT. Teknik Hub Indonesia adalah penyedia Solusi Terpadu terkemuka yang menawarkan berbagai layanan teknik. Kami mengkhususkan diri dalam Layanan Elektrikal dan Mekanikal, 
+                    Konstruksi, Perdagangan Umum, serta Pengembangan Web. Kami menghadirkan solusi yang disesuaikan untuk memenuhi kebutuhan spesifik Anda.</p>
                 <div class="hero-button" data-aos="fade-up" data-aos-duration="1000">
                     <a href="https://wa.me/628997600661" target="_blank">
-                        <button class="hero-order-btn">Contact Us <svg width="29" height="25"
+                        <button class="hero-order-btn"> Hubungi Kami <svg width="29" height="25"
                                 viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_0_38)">
                                     <path
@@ -52,7 +51,7 @@
                             </svg>
                         </button>
                     </a>
-                    <a class="hero-produk-btn" href="#produk">Lihat semua produk</a>
+                    <a class="hero-produk-btn" href="#produk">Lihat semua produk & Layanan</a>
                 </div>
             </div>
             <div class="hero-right" data-aos="fade-up" data-aos-duration="1000">
@@ -63,8 +62,8 @@
 
     <section class="porto" id="benefit">
         <h1 style="text-align: center;">PORTOFOLIO</h1>
-        <p>With a dedicated team of professionals and a commitment to excellence, we strive to deliver high-quality services and innovative solutions that drive success for our clients. 
-            From electrical maintenance and construction to hydraulic equipment supply and web development, Teknik Hub Indonesia is your trusted partner for all your engineering needs. 
+        <p>Dengan tim profesional yang berdedikasi dan komitmen terhadap keunggulan, kami berusaha memberikan layanan berkualitas tinggi dan solusi inovatif yang mendorong kesuksesan bagi klien kami. 
+            Dari pemeliharaan listrik dan konstruksi hingga penyediaan peralatan hidrolik dan pengembangan web, Teknik Hub Indonesia adalah mitra terpercaya Anda untuk semua kebutuhan teknik. 
         </p>
         <div class="porto-list">
             @php

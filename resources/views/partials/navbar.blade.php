@@ -2,15 +2,15 @@
     <a href="/">
         <div class="nav-left">
             <img src="/assets/header/logo-new.webp" alt="logo">
-            {{-- <h1>JAYA TEKNIK GLOBAL</h1> --}}
+            {{-- <h1>TEKNIK HUB INDONESIA</h1> --}}
         </div>
     </a>
     <div class="nav-right">
         <ul>
-            <li><a href="/#">Home</a></li>
-            <li><a href="/#benefit">Portfolio</a></li>
-            <li><a href="/#produk">Products & services</a></li>
-            <li><a href="/#kontak">Contact</a></li>
+            <li><a href="/#">Beranda</a></li>
+            <li><a href="/#benefit">Portofolio</a></li>
+            <li><a href="/#produk">Produk & Layanan</a></li>
+            <li><a href="/#kontak">Kontak</a></li>
         </ul>
     </div>
     <div class="nav-bars">
