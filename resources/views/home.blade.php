@@ -30,7 +30,7 @@
 
         <div class="hero">
             <div class="hero-left">
-                <h1 data-aos="fade-up" data-aos-duration="1000">ONE-STOP Solution <br> Electrical Mechanical Services <br> Construction Services <br> General Trading and Suppliers Industry </h1>
+                <h1 data-aos="fade-up" data-aos-duration="1000"> ONE-STOP SOLUTION <br> Electrical Mechanical Services Construction Services General Trading and Suppliers Industry </h1>
                 <p data-aos="fade-up" data-aos-duration="1000">PT. Teknik Hub Indonesia is a leading One-Stop Solution provider offering a comprehensive array of engineering services. 
                     Specializing in Electrical Mechanical, Construction Service, General Trading, and Suppliers, as well as Web Development, 
                     we deliver tailored solutions to address your specific requirements</p>
