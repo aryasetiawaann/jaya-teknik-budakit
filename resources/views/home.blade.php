@@ -114,7 +114,7 @@
     </section>
 
     <section class="produk" id="produk">
-        <h1>List Of our Products</h1>
+        <h1>Produk & Layanan</h1>
         <div class="kategori-wrap">
             <svg class="kategori-icon" id="left" xmlns="http://www.w3.org/2000/svg" width="24"
                 height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
