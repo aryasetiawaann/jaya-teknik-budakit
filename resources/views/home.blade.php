@@ -30,7 +30,7 @@
 
         <div class="hero">
             <div class="hero-left">
-                <h1 data-aos="fade-up" data-aos-duration="1000"> ONE-STOP SOLUTION <br> Electrical, Mechanical, Construction <br> and Trading Services </h1>
+                <h1 data-aos="fade-up" data-aos-duration="1000"> ONE-STOP SOLUTION SERVICES </h1>
                 <p data-aos="fade-up" data-aos-duration="1000">PT. Teknik Hub Indonesia adalah penyedia Solusi Terpadu terkemuka yang menawarkan berbagai layanan teknik. Kami mengkhususkan diri dalam Layanan Elektrikal dan Mekanikal, 
                     Konstruksi, Perdagangan Umum, serta Pengembangan Web. Kami menghadirkan solusi yang disesuaikan untuk memenuhi kebutuhan spesifik Anda.</p>
                 <div class="hero-button" data-aos="fade-up" data-aos-duration="1000">
