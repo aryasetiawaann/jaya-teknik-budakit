@@ -58,7 +58,7 @@ class HomeController extends Controller
 
     public function download()
     {
-        $path = public_path('CompanyProfile.pdf');
+        $path = public_path('CompanyProfile .pdf');
 
         if (!File::exists($path)) {
             abort(404);
